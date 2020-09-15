@@ -1,0 +1,26 @@
+{
+  "name": "budget-app-backend",
+  "version": "0.0.1",
+  "description": "API for Budget Application",
+  "main": "server.js",
+  "scripts": {
+    "dev": "nodemon ./src/server.js",
+    "generate-keys": "chmod +x ./scripts/generate_key.sh && ./scripts/generate_key.sh"
+  },
+  "author": "Malik Henry",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.0.0",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "pg": "^8.3.3",
+    "pg-format": "^1.0.4"
+  },
+  "devDependencies": {
+    "eslint": "^7.8.1",
+    "eslint-config-airbnb-base": "^14.2.0",
+    "eslint-plugin-import": "^2.22.0"
+  }
+}
