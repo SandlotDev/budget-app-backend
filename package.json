@@ -4,14 +4,18 @@
   "description": "API for Budget Application",
   "main": "server.js",
   "scripts": {
-    "dev": "nodemon ./src/server.js",
-    "generate-keys": "chmod +x ./scripts/generate_key.sh && ./scripts/generate_key.sh"
+    "db:build": "chmod +x ./scripts/dev/db_build.sh && ./scripts/dev/db_build.sh",
+    "db:rebuild": "chmod +x ./scripts/dev/db_rebuild.sh && ./scripts/dev/db_rebuild.sh",
+    "dev:kill": "env-cmd cross-var lsof -n -i4TCP:%PORT% | awk -F' ' 'NR==2{print $2}' | xargs -I {} kill -9 {}",
+    "keys:generate": "chmod +x ./scripts/dev/generate_key.sh && ./scripts/dev/generate_key.sh",
+    "start": "chmod +x ./scripts/start.sh && ./scripts/start.sh"
   },
   "author": "Malik Henry",
   "license": "ISC",
   "dependencies": {
     "bcrypt": "^5.0.0",
     "cors": "^2.8.5",
+    "csv-stringify": "^5.5.1",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "jsonwebtoken": "^8.5.1",
@@ -21,6 +25,7 @@
   "devDependencies": {
     "eslint": "^7.8.1",
     "eslint-config-airbnb-base": "^14.2.0",
-    "eslint-plugin-import": "^2.22.0"
+    "eslint-plugin-import": "^2.22.0",
+    "faker": "^5.1.0"
   }
 }

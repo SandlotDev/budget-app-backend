@@ -1,0 +1,25 @@
+version: "3"
+services:
+  web:
+    image: henrymalik19/budget-app:0.1
+    container_name: web
+    environment:
+      - NODE_ENV=production
+      - PGUSER=${PGUSER}
+      - PGHOST=db
+      - PGPASSWORD=${PGPASSWORD}
+      - PGDATABASE=${PGPASSWORD}
+      - PRIVATE_KEY=${PRIVATE_KEY}
+      - PUBLIC_KEY=${PUBLIC_KEY}
+    ports:
+      - 3000:3000
+    depends_on:
+      - db
+  db:
+    image: postgres:latest
+    container_name: db
+    environment:
+      - POSTGRES_PASSWORD=${PGPASSWORD}
+      - POSTGRES_USER=${PGUSER}
+    ports:
+      - 5432:5432
