@@ -9,12 +9,12 @@ assert(process.env.PGUSER, 'env PGUSER is required');
 assert(process.env.PGHOST, 'env PGHOST is required');
 assert(process.env.PGPASSWORD, 'env PGPASSWORD is required');
 assert(process.env.PGDATABASE, 'env PGDATABASE is required');
-assert(process.env.PRIVATE_KEY || fs.existsSync(privateKeyPath), 'env PRIVATE_KEY is required - Try running "npm keys:generate"');
-assert(process.env.PUBLIC_KEY || fs.existsSync(publicKeyPath), 'env PUBLIC_KEY is required - Try running "npm keys:generate"');
+assert(fs.existsSync(privateKeyPath), 'env PRIVATE_KEY is required - Try running "npm keys:generate"');
+assert(fs.existsSync(publicKeyPath), 'env PUBLIC_KEY is required - Try running "npm keys:generate"');
 
 const PORT = process.env.PORT || 3000;
-const PRIVATE_KEY = process.env.PRIVATE_KEY || fs.readFileSync(privateKeyPath, 'utf8');
-const PUBLIC_KEY = process.env.PRIVATE_KEY || fs.readFileSync(publicKeyPath, 'utf8');
+const PRIVATE_KEY = fs.readFileSync(privateKeyPath, 'utf8');
+const PUBLIC_KEY = fs.readFileSync(publicKeyPath, 'utf8');
 
 module.exports = {
   PORT,

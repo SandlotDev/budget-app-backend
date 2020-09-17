@@ -62,10 +62,10 @@ COPY users (
     email,
     password_hash
 )
-FROM '/app/dev/db/data/users.csv' DELIMITER ',' CSV HEADER;
+FROM '/docker-entrypoint-initdb.d/data/users.csv' DELIMITER ',' CSV HEADER;
 -- 
 COPY budgets (owner_id, budget_name)
-FROM '/app/dev/db/data/budgets.csv' DELIMITER ',' CSV HEADER;
+FROM '/docker-entrypoint-initdb.d/data/budgets.csv' DELIMITER ',' CSV HEADER;
 -- 
 COPY accounts (
     budget_id,
@@ -74,10 +74,10 @@ COPY accounts (
     account_balance,
     account_type_id
 )
-FROM '/app/dev/db/data/accounts.csv' DELIMITER ',' CSV HEADER;
+FROM '/docker-entrypoint-initdb.d/data/accounts.csv' DELIMITER ',' CSV HEADER;
 -- 
 COPY categories (budget_id, owner_id, category_name)
-FROM '/app/dev/db/data/categories.csv' DELIMITER ',' CSV HEADER;
+FROM '/docker-entrypoint-initdb.d/data/categories.csv' DELIMITER ',' CSV HEADER;
 -- 
 COPY payees (budget_id, owner_id, payee_name)
-FROM '/app/dev/db/data/payees.csv' DELIMITER ',' CSV HEADER;
+FROM '/docker-entrypoint-initdb.d/data/payees.csv' DELIMITER ',' CSV HEADER;
