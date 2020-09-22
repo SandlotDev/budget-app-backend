@@ -1,12 +1,14 @@
-image: node:10.5.0
-stages: — build
-  — test
-  — deploy
+stages:
+  - build
+  - test
+  - deploy
 
 before_script:
   - npm install
   - ls
+
 build-min-code:
+  image: node:10.5.0
   stage: build
   script:
     - npm install
