@@ -5,15 +5,15 @@ on:
 
 jobs:
   build:
-  runs-on: ubuntu-latest
+    runs-on: ubuntu-latest
 
-  steps:
-    - uses: actions/checkout@v2
-
-    - name: Install Dependencies
-      run: npm install
-
-  test:
     steps:
-        - name: hello
-        run: echo "$(env)"
+      - uses: actions/checkout@v2
+      - name: Install Dependencies
+        run: npm install
+        
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: hello
+        run: echo "${env}"
