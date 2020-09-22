@@ -12,5 +12,6 @@ COPY  ./package-lock.json .
 EXPOSE 3000
 
 RUN npm install
+RUN ls
 
 CMD [ "npm", "start" ]
