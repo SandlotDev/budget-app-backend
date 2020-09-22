@@ -1,7 +1,5 @@
 stages:
   - build
-  - test
-  - deploy
 
 before_script:
   - npm install
@@ -12,4 +10,3 @@ build-min-code:
   stage: build
   script:
     - npm install
-    - npm run minifier
