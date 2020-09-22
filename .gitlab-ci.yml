@@ -1,6 +1,0 @@
-before_script:
-  - npm install
-
-build:
-  script:
-    - ls
