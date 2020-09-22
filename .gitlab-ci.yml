@@ -5,6 +5,7 @@ stages: — build
 
 before_script:
   - npm install
+  - ls
 build-min-code:
   stage: build
   script:
