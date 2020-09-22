@@ -18,7 +18,6 @@ const getAccounts = async (req, res) => {
     const { budgetId } = req.query;
 
     const budget = await db.query('budgets').findById(budgetId);
-    console.log(budget);
     if (!budget) {
       return res.status(status.bad).json(http400Message());
     }

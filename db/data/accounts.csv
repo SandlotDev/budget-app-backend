@@ -1,0 +1,76 @@
+budget_id,owner_id,account_name,account_balance,account_type_id
+1,1,Savings Account - 1,551.04,2
+1,1,Savings Account - 2,732.54,2
+1,1,Credit Card Account - 3,280.23,1
+1,1,Investment Account - 4,463.36,2
+1,1,Investment Account - 5,554.87,3
+2,1,Savings Account - 6,926.16,2
+2,1,Checking Account - 7,390.49,3
+2,1,Home Loan Account - 8,188.6,1
+2,1,Credit Card Account - 9,439.36,3
+2,1,Checking Account - 10,14.67,1
+3,1,Money Market Account - 11,113.87,3
+3,1,Money Market Account - 12,638.86,2
+3,1,Home Loan Account - 13,274,2
+3,1,Personal Loan Account - 14,119.86,2
+3,1,Money Market Account - 15,705.76,3
+4,2,Home Loan Account - 16,34.51,3
+4,2,Credit Card Account - 17,301.37,3
+4,2,Home Loan Account - 18,646.7,1
+4,2,Savings Account - 19,37.31,3
+4,2,Home Loan Account - 20,287.39,1
+5,2,Home Loan Account - 21,640.61,1
+5,2,Auto Loan Account - 22,1.53,2
+5,2,Checking Account - 23,712.28,2
+5,2,Personal Loan Account - 24,430.25,1
+5,2,Savings Account - 25,742.08,2
+6,2,Money Market Account - 26,765.42,3
+6,2,Checking Account - 27,496.37,2
+6,2,Savings Account - 28,273.23,3
+6,2,Savings Account - 29,973.49,3
+6,2,Home Loan Account - 30,412.29,3
+7,3,Savings Account - 31,195.55,1
+7,3,Investment Account - 32,686.73,2
+7,3,Personal Loan Account - 33,543.89,1
+7,3,Money Market Account - 34,351.47,2
+7,3,Personal Loan Account - 35,645.24,1
+8,3,Checking Account - 36,830.23,1
+8,3,Credit Card Account - 37,156.07,3
+8,3,Personal Loan Account - 38,131.22,1
+8,3,Home Loan Account - 39,698.52,3
+8,3,Auto Loan Account - 40,597.69,3
+9,3,Checking Account - 41,773.69,2
+9,3,Savings Account - 42,278.18,2
+9,3,Auto Loan Account - 43,652.73,2
+9,3,Checking Account - 44,905.53,3
+9,3,Home Loan Account - 45,943.9,2
+10,4,Checking Account - 46,428.86,3
+10,4,Checking Account - 47,820.63,3
+10,4,Auto Loan Account - 48,914.76,3
+10,4,Credit Card Account - 49,907.79,3
+10,4,Savings Account - 50,599.08,3
+11,4,Checking Account - 51,963.5,2
+11,4,Investment Account - 52,621.56,2
+11,4,Home Loan Account - 53,297.28,3
+11,4,Investment Account - 54,649.37,3
+11,4,Money Market Account - 55,734.89,1
+12,4,Investment Account - 56,842.19,3
+12,4,Credit Card Account - 57,124.91,2
+12,4,Auto Loan Account - 58,648.86,1
+12,4,Credit Card Account - 59,37.39,3
+12,4,Savings Account - 60,963.53,2
+13,5,Auto Loan Account - 61,433.83,2
+13,5,Checking Account - 62,801.77,3
+13,5,Investment Account - 63,529.74,3
+13,5,Money Market Account - 64,108.8,1
+13,5,Home Loan Account - 65,252.25,2
+14,5,Savings Account - 66,403.09,1
+14,5,Money Market Account - 67,998.7,2
+14,5,Personal Loan Account - 68,891.63,2
+14,5,Checking Account - 69,298.59,2
+14,5,Money Market Account - 70,879.02,2
+15,5,Personal Loan Account - 71,681.58,3
+15,5,Investment Account - 72,599.74,1
+15,5,Personal Loan Account - 73,31.25,3
+15,5,Money Market Account - 74,951.83,3
+15,5,Savings Account - 75,637.71,2

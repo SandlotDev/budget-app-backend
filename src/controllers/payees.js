@@ -141,5 +141,5 @@ module.exports = {
   getPayees,
   createPayee,
   updatePayee,
-  deletePayee,
+  deletePayee
 };

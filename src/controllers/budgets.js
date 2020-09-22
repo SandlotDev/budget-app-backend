@@ -44,7 +44,7 @@ const getBudget = async (req, res) => {
 
     // TESTING QUERY STRING CUSTOMIZED REQUESTS
     if (req.query.accounts) {
-      budget.accounts = await db.query('accounts').find({ $eq: { budget_id: budgetId } });
+      budget.accounts = await db.query('accounts').find({ $eq: { budget_id: budgetId, owner_id: userId } });
     }
     // TESTING QUERY STRING CUSTOMIZED REQUESTS
 

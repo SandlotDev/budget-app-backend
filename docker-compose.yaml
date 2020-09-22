@@ -1,0 +1,30 @@
+version: "3"
+services:
+  api:
+    build: "./api"
+    # image: henrymalik19/budget-app-backend-api
+    container_name: api
+    environment:
+      - NODE_ENV=docker
+      - PGUSER=postgres
+      - PGHOST=db
+      - PGPASSWORD=password
+      - PGDATABASE=budgetapp
+      # - PRIVATE_KEY=${PRIVATE_KEY}
+      # - PUBLIC_KEY=${PUBLIC_KEY}
+    ports:
+      - 3000:3000
+    # volumes:
+    #   - ./api:/home/budgetApp/api
+    depends_on:
+      - db
+  db:
+    build: "./db"
+    # image: henrymalik19/budget-app-backend-db
+    container_name: db
+    environment:
+      - POSTGRES_PASSWORD=password
+      - POSTGRES_USER=postgres
+      - POSTGRES_ENV=development
+    ports:
+      - 5432:5432

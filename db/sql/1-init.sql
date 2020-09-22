@@ -1,6 +1,4 @@
 -- 
-CREATE DATABASE budgetapp;
--- 
 CREATE TABLE users (
     id SERIAL UNIQUE,
     first_name VARCHAR(20) NOT NULL,

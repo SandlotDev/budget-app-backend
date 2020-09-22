@@ -4,7 +4,7 @@
 const faker = require('faker');
 const fs = require('fs');
 const stringify = require('csv-stringify');
-const { hashPassword } = require('../../web/src/utils/password');
+const { hashPassword } = require('../utils/password');
 
 const createUser = (pass, idx) => ({
   id: idx,
@@ -45,7 +45,7 @@ const createPayee = (budgetId, ownerId, idx) => ({
 
 const toCSV = (data, file) => {
   stringify(data, { header: true }, (err, output) => {
-    fs.writeFile(`./scripts/dev/data/${file}.csv`, output, () => {});
+    fs.writeFile(`./db/data/${file}.csv`, output, () => {});
   });
 };
 
@@ -59,9 +59,9 @@ const seed = (numOfUsers) => {
   hashPassword('12345').then((passhash) => {
     const userCount = numOfUsers || 5;
     const budgetCount = 3;
-    const accountCount = 8;
-    const categoryCount = 15;
-    const payeeCount = 15;
+    const accountCount = 5;
+    const categoryCount = 5;
+    const payeeCount = 5;
 
     let userId = 1;
     let budgetId = 1;
@@ -72,17 +72,11 @@ const seed = (numOfUsers) => {
     for (let uIdx = 1; uIdx <= userCount; uIdx++) {
       const user = createUser(passhash, userId);
       users.push(user);
-      userId += 1;
-    }
 
-    users.forEach((user) => {
       for (let bIdx = 1; bIdx <= budgetCount; bIdx++) {
         const budget = createBudget(user.id, budgetId);
         budgets.push(budget);
-        budgetId += 1;
-      }
 
-      budgets.forEach((budget) => {
         for (let aIdx = 1; aIdx <= accountCount; aIdx++) {
           const account = createAccount(budget.id, user.id, accountId);
           accounts.push(account);
@@ -100,8 +94,12 @@ const seed = (numOfUsers) => {
           payees.push(payee);
           payeeId += 1;
         }
-      });
-    });
+
+        budgetId += 1;
+      }
+
+      userId += 1;
+    }
 
     users.forEach((user) => delete user.id);
     budgets.forEach((budget) => delete budget.id);

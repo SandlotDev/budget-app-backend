@@ -51,6 +51,9 @@ const signup = async (req, res) => {
       return res.status(status.bad).json(http400Message('account with this email already exists'));
     }
 
+
+
+    
     const user = await db.query('users').insert({
       first_name: name.first.toLowerCase(),
       last_name: name.last.toLowerCase(),
@@ -58,11 +61,9 @@ const signup = async (req, res) => {
       password_hash: await hashPassword(password),
     });
 
-    console.log(user);
     const token = await generateToken({ id: user.id }, user.email);
     return res.status(status.created).json(http201Response(token));
   } catch (error) {
-    console.log(error);
     return res.status(status.error).json(http500Message(error.message));
   } finally {
     db.release();

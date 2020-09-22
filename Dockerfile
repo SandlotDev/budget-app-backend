@@ -5,8 +5,7 @@ RUN mkdir -p /home/budgetApp
 WORKDIR /home/budgetApp
 
 COPY ./src ./src
-COPY ./scripts ./scripts
-COPY ./.config ./.config
+COPY ./.scripts ./.scripts
 COPY ./package.json .
 COPY  ./package-lock.json .
 
